@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/chica/OTT/ott-frontend/src/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\r\nimport { FaBeer } from \"react-icons/fa\";\r\n\r\nexport default function Home() {\r\n  return (\r\n    <div className=\"flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black\">\r\n      <main className=\"flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start\">\r\n        <h3> Prueba de  <FaBeer/></h3>\r\n      </main>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AACA;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAK,WAAU;sBACd,cAAA,8OAAC;;oBAAG;kCAAY,8OAAC,wJAAM;;;;;;;;;;;;;;;;;;;;;AAI/B"}}]
+}
