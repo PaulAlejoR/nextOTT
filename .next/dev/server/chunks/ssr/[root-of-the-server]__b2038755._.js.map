@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/paulalejo/OTT/nextOTT/src/app/page.tsx"],"sourcesContent":["import Image from \"next/image\";\nimport { GiHamburgerMenu } from \"react-icons/gi\";\nimport { IoMdClose } from \"react-icons/io\";\nimport Link from \"next/link\";\n\nexport default function Home() {\n  return (\n    <div className=\"flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black\">\n      <main className=\"flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start\">\n        <h3> Prueba de  <GiHamburgerMenu/> </h3>\n        <button>\n          <Link href=\"/navbar\">\n            <IoMdClose size={32} />\n          </Link>\n        </button>\n      </main>\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;AACA;AACA;AACA;;;;;AAEe,SAAS;IACtB,qBACE,gQAAC;QAAI,WAAU;kBACb,cAAA,gQAAC;YAAK,WAAU;;8BACd,gQAAC;;wBAAG;sCAAY,gQAAC,mLAAe;;;;;wBAAE;;;;;;;8BAClC,gQAAC;8BACC,cAAA,gQAAC,4MAAI;wBAAC,MAAK;kCACT,cAAA,gQAAC,6KAAS;4BAAC,MAAM;;;;;;;;;;;;;;;;;;;;;;;;;;;AAM7B"}}]
-}

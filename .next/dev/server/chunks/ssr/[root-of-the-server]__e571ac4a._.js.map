@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/paulalejo/OTT/nextOTT/src/app/navbar/navbar2.tsx"],"sourcesContent":["import Link from 'next/link';\n\nexport const navbar2 = () => {\n\treturn (\n\t\t<nav className=\"bg-black p-4 sm:p-4 md:flex md:justify-between md:items-center\">\n\t\t\t<div className=\"container mx-auto flex justify-between items-center\">\n\t\t\t\t<a href=\"\" className=\"container mx-auto flex justify-between items-center\">\n\t\t\t\t\tanesma\n\t\t\t\t</a>\n\n\n\t\t\t\t<div className=\"hidden md:flex\">\n\n\t\t\t\t\t<Link href=\"/\" className=\"mx-2\">\n\t\t\t\t\t\tInicio\n\t\t\t\t\t</Link>\n\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</nav>\t\n\t);\n}\n\nexport default navbar2;"],"names":[],"mappings":";;;;;;;AAAA;;;AAEO,MAAM,UAAU;IACtB,qBACC,gQAAC;QAAI,WAAU;kBACd,cAAA,gQAAC;YAAI,WAAU;;8BACd,gQAAC;oBAAE,MAAK;oBAAG,WAAU;8BAAsD;;;;;;8BAK3E,gQAAC;oBAAI,WAAU;8BAEd,cAAA,gQAAC,4MAAI;wBAAC,MAAK;wBAAI,WAAU;kCAAO;;;;;;;;;;;;;;;;;;;;;;AASrC;uCAEe"}},
-    {"offset": {"line": 76, "column": 0}, "map": {"version":3,"sources":["file:///home/paulalejo/OTT/nextOTT/src/app/navbar/page.tsx"],"sourcesContent":["import Image from \"next/image\";\nimport Navbar from \"./navbar2\";\n\nexport default function Home() {\n    return <Navbar/>\n}"],"names":[],"mappings":";;;;;AACA;;;AAEe,SAAS;IACpB,qBAAO,gQAAC,6JAAM;;;;;AAClB"}}]
-}
