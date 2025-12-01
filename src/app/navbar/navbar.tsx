@@ -12,8 +12,23 @@ import { FaRegBookmark } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 
-import MenuIcon from "/menu.svg";
-import CloseIcon from "/crossIconCancel.svg";
+
+const iconos = [
+    {
+        id: 1,
+        src: "/icons_navbar/menu.svg",
+        alt: "Menu Icon",
+        height: 32,
+        width: 32
+    },
+    {
+        id: 2,
+        src: "/icons_navbar/crossIconCancel.svg",
+        alt: "Close Icon",
+        height: 32,
+        width: 32
+    }
+];
 
 const Navbar: React.FC = () => {
 
@@ -80,9 +95,13 @@ const Navbar: React.FC = () => {
                     <div className="md:hidden flex items-center">
                         <button onClick={toggleNavbar} >
                             {isOpen ? (
-                                <GiHamburgerMenu size={32} color="white"/>
+                                <Image
+                                    src={iconos[1].src} alt={iconos[1].alt} height={iconos[1].height} width={iconos[1].width}
+                                />
                             ) : (
-                                <IoMdClose size={32} color="white"/>
+                                <Image
+                                    src={iconos[0].src} alt={iconos[0].alt} height={iconos[0].height} width={iconos[0].width}
+                                />
                             )}
                         </button>
 
