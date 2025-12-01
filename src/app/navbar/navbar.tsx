@@ -8,8 +8,12 @@ import { useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import MenuIcon from '../../../public/menu.svg'
-import CloseIcon from '../../../public/crossIconCancel.svg'
+import { FaRegBookmark } from "react-icons/fa";
+import { AiOutlineSearch } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
+
+import MenuIcon from "/menu.svg";
+import CloseIcon from "/crossIconCancel.svg";
 
 const Navbar: React.FC = () => {
 
@@ -33,7 +37,7 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="hidden md:block">
+                    <div className="hidden md:flex justify-between items-center">
                         <div className="ml-4 flex item-center space-x-4">
                             
                             <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
@@ -56,27 +60,49 @@ const Navbar: React.FC = () => {
                                 TV en directo
                             </Link>
 
+                            <div className="flex items-center space-x-4 ml-auto">
+                                <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                                    <AiOutlineSearch size={20} />
+                                </Link>
+
+                                <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                                    <FaRegBookmark size={20} />
+                                </Link>
+
+                                <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                                    <CgProfile size={20} />
+                                </Link>
+                            </div>
+
                         </div>
                     </div>
 
                     <div className="md:hidden flex items-center">
                         <button onClick={toggleNavbar} >
                             {isOpen ? (
-
-                                <GiHamburgerMenu size={32} color="white" />
+                                <GiHamburgerMenu size={32} color="white"/>
                             ) : (
-                                
-
-                                <IoMdClose size={32} color="white" />
+                                <IoMdClose size={32} color="white"/>
                             )}
                         </button>
+
+                            {/* Estructura a probar con imagenes locales SVG porque no me deja cargarlas aunque esten en public                            
+                            
+                                {isOpen ? (
+                                    <GiHamburgerMenu size={32} color="white" />
+                                ) : (
+                                    <IoMdClose size={32} color="white" />
+                                )}
+
+                            */}
+
                     </div>
 
                 </div>
 
                 <nav>
                     {isOpen && (
-                        <div className="md:hidden">
+                        <div className="md:hidden flex flex-col space-y-2 mt-2">
                             <Link href="/" className="block nav-item">
                                 Inicio
                             </Link>
@@ -95,6 +121,10 @@ const Navbar: React.FC = () => {
 
                             <Link href="/" className="block nav-item">
                                 TV en directo
+                            </Link>
+
+                            <Link href="/" className="block nav-item">
+                                Mi contenido - Espacio: lista, contenido comprado o alquilado, etc.
                             </Link>
                         </div>
                     )}
