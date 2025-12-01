@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///home/paulalejo/OTT/nextOTT/public/menu.svg.mjs%20%28structured%20image%20object%20with%20data%20url%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 683, height: 683, blurWidth: 0, blurHeight: 0};\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,qJAAG;IAAE,OAAO;IAAK,QAAQ;IAAK,WAAW;IAAG,YAAY;AAAC"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file:///home/paulalejo/OTT/nextOTT/public/crossIconCancel.svg.mjs%20%28structured%20image%20object%20with%20data%20url%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 1307, height: 1307, blurWidth: 0, blurHeight: 0};\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,gKAAG;IAAE,OAAO;IAAM,QAAQ;IAAM,WAAW;IAAG,YAAY;AAAC"}}]
+}

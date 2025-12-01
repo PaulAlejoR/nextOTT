@@ -1,18 +1,23 @@
 /* Los componentes que usan hooks deben tener, este archivo se puede poner en una carpeta components */
-'use client'
+'use client';
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import MenuIcon from '../../../public/menu.svg'
+import CloseIcon from '../../../public/crossIconCancel.svg'
 
 const Navbar: React.FC = () => {
 
-    const [isClick, setisClick] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    /*const toggleNavbar = () => {
-        setisClick(!isClick);
-    }*/
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
+    }
 
     return (
         <div>
@@ -22,7 +27,7 @@ const Navbar: React.FC = () => {
 
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">
-                            <div className="flex-shrink-0">
+                            <div className="shrink-0">
                                 <Link href="/">Logo</Link>
                             </div>
                         </div>
@@ -55,43 +60,45 @@ const Navbar: React.FC = () => {
                     </div>
 
                     <div className="md:hidden flex items-center">
-                        <button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white 
-                        focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                        onClick={() => setisClick(!isClick)}
-                        >
-                            {isClick ? <FiX size={24} /> : <FiMenu size={24} />}
+                        <button onClick={toggleNavbar} >
+                            {isOpen ? (
+
+                                <GiHamburgerMenu size={32} color="white" />
+                            ) : (
+                                
+
+                                <IoMdClose size={32} color="white" />
+                            )}
                         </button>
                     </div>
 
                 </div>
 
-                {isClick && (
-                    <div className="md:hidden">
-                        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-
-                            <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                <nav>
+                    {isOpen && (
+                        <div className="md:hidden">
+                            <Link href="/" className="block nav-item">
                                 Inicio
                             </Link>
 
-                            <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                            <Link href="/" className="block nav-item">
                                 Películas
                             </Link>
 
-                            <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                            <Link href="/" className="block nav-item">
                                 Series
                             </Link>
 
-                            <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                            <Link href="/" className="block nav-item">
                                 Deportes
                             </Link>
 
-                            <Link href="/" className="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                            <Link href="/" className="block nav-item">
                                 TV en directo
                             </Link>
-
                         </div>
-                    </div>
-                )}
+                    )}
+                </nav>
 
             </nav>
         </div>
