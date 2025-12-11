@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                         </Link>
 
                         {/* 3. Perfil: Siempre visible */}
-                        <Link href="/" className="hover:bg-white hover:text-black rounded-full p-2 transition">
+                        <Link href="/login" className="hover:bg-white hover:text-black rounded-full p-2 transition">
                             <CgProfile size={24} />
                         </Link>
                     </div>
