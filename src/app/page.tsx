@@ -3,6 +3,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { TbLayoutNavbarFilled } from "react-icons/tb";
 import { GiBarefoot } from "react-icons/gi";
+import { MdOutlineLogin } from "react-icons/md";
+import { RiAccountCircleLine } from "react-icons/ri";
+import { VscVerifiedFilled } from "react-icons/vsc";
 
 import Link from "next/link";
 
@@ -15,9 +18,29 @@ export default function Home() {
           <Link href="/navbar">
             <TbLayoutNavbarFilled size={32} />
           </Link>
+        </button>
 
+        <button>
           <Link href="/privacidadTerminos">
             <GiBarefoot size={32} />
+          </Link>
+        </button>
+
+        <button>
+          <Link href="/login">
+            <MdOutlineLogin size={32} />
+          </Link>
+        </button>
+
+        <button>
+          <Link href="/crearCuenta">
+            <RiAccountCircleLine size={32} />
+          </Link>
+        </button>
+
+        <button>
+          <Link href="/verificacion">
+            <VscVerifiedFilled size={32} />
           </Link>
         </button>
       </main>
