@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { FaRegBookmark } from "react-icons/fa";
@@ -33,7 +34,9 @@ const Navbar: React.FC = () => {
 
                         {/* Logo: Siempre visible */}
                         <div className="shrink-0 font-bold text-xl">
-                            <Link href="/">Logo</Link>
+                            <Link href="/">
+                                <Image src="/icons_navbar/anesma-logo.jpg" alt="Logo" width={65} height={65}  />
+                            </Link>
                         </div>
 
                         {/* --- CENTRO: Enlaces de Navegación (Desktop) --- */}
@@ -43,7 +46,7 @@ const Navbar: React.FC = () => {
                             <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">Películas</Link>
                             <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">Series</Link>
                             <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">Deportes</Link>
-                            <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">TV en directo</Link>
+                            <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">En vivo</Link>
                         </div>
                     </div>
 
@@ -85,6 +88,7 @@ const Navbar: React.FC = () => {
                 </div>
             )}
         </nav>
+        
     );
 }
 
