@@ -8,9 +8,29 @@ import { IoMdClose } from "react-icons/io";
 import { FaRegBookmark } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import { FaChevronDown } from "react-icons/fa";
+
+
+const categorias = [
+    'noticias',
+    'deportes',
+    'entretenimiento',
+    'novelas',
+    'series',
+    'peliculas',
+    'programas',
+    'infantil',
+    'documentales',
+    'especiales',
+    'variedades',
+    'cultura',
+  ];
+
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
@@ -47,6 +67,34 @@ const Navbar: React.FC = () => {
                             <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">Series</Link>
                             <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">Deportes</Link>
                             <Link href="/" className="hover:bg-white hover:text-black rounded-lg p-2 transition">En vivo</Link>
+
+                            {/* Dropdown Categorías */}
+                            <div className="relative">
+                                <button
+                                    className="hover:bg-white hover:text-black rounded-lg p-2 transition"
+                                    onClick={() => setIsOpen(!isOpen)}
+                                >
+                                    Categorias <FaChevronDown className="inline-block ml-1" />
+                                </button>
+
+                                {isOpen && (
+                                    <div className="absolute mt-2 bg-gray-800 rounded shadow-lg w-48">
+                                    {categorias.map((cat) => (
+                                        <Link
+                                        key={cat}
+                                        href={`/categorias/${cat}`}
+                                        className="block px-4 py-2 hover:bg-gray-700"
+                                        onClick={() => setIsOpen(false)}
+                                        >
+                                        {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                        </Link>
+                                    ))}
+                                    </div>
+                                )}
+
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -83,6 +131,33 @@ const Navbar: React.FC = () => {
                     <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-zinc-700">Películas</Link>
                     <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-zinc-700">Series</Link>
                     <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-zinc-700">Deportes</Link>
+                    <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-zinc-700">En vivo</Link>
+
+                    {/* Menu de acordeon para las categorías */}
+                    <div className="relative">
+                        <button  
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium hover:bg-zinc-700"
+                        >
+                            Categorias <FaChevronDown className={`transform transition-transform ${isMobileMenuOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                    </div>
+
+                    {isMobileMenuOpen && (
+                        <div className="pl-6 space-y-1">
+                            {categorias.map( (cat) => (
+                                <Link
+                                    key={cat}
+                                    href={`/categorias/${cat}`}
+                                    className="block px-3 py-2 text-sm text-gray-300 hover:text-white"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+
                     {/* Agregamos la opción de 'Mi Lista' aquí dentro porque arriba la ocultamos en móvil */}
                     <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-blue-400 hover:bg-zinc-700">Mi Lista (Ver todo)</Link>
                 </div>
