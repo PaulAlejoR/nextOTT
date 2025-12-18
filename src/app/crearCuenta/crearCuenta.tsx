@@ -7,7 +7,7 @@ export default function CrearCuentaPage() {
 
   const handleSubmit = () => {
     // Aquí iría la lógica de Firebase para crear cuenta
-    router.push('/verificación');
+    router.push('/verificacion');
   };
 
   return (
@@ -40,7 +40,7 @@ export default function CrearCuentaPage() {
           onClick={handleSubmit}
           className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded font-semibold"
         >
-          Continuar →
+          Continuar
         </button>
 
         <div className="flex justify-center gap-4">
