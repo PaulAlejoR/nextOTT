@@ -7,6 +7,7 @@ import { MdOutlineLogin } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { BiCategoryAlt } from "react-icons/bi";
+import { FaKey } from 'react-icons/fa';
 
 import Link from "next/link";
 
@@ -50,6 +51,12 @@ export default function Home() {
             <button>
               <Link href="/categorias">
                 <BiCategoryAlt size={32} />
+              </Link>
+            </button>
+
+            <button>
+              <Link href="/newPassword/nuevaContraseña">
+                <FaKey size={32} />
               </Link>
             </button>
           </div>
