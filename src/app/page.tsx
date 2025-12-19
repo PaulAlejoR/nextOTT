@@ -55,7 +55,7 @@ export default function Home() {
             </button>
 
             <button>
-              <Link href="/newPassword/nuevaContraseña">
+              <Link href="/newPassword">
                 <FaKey size={32} />
               </Link>
             </button>
