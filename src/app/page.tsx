@@ -8,6 +8,8 @@ import { RiAccountCircleLine } from "react-icons/ri";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { BiCategoryAlt } from "react-icons/bi";
 import { FaKey } from 'react-icons/fa';
+import { MdViewComfy } from "react-icons/md";
+
 
 import Link from "next/link";
 
@@ -57,6 +59,12 @@ export default function Home() {
             <button>
               <Link href="/newPassword">
                 <FaKey size={32} />
+              </Link>
+            </button>
+
+            <button>
+              <Link href="/vista">
+                <MdViewComfy size={32} />
               </Link>
             </button>
           </div>
