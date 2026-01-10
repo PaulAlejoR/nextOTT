@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { TbLayoutNavbarFilled } from "react-icons/tb";
@@ -9,6 +8,9 @@ import { VscVerifiedFilled } from "react-icons/vsc";
 import { BiCategoryAlt } from "react-icons/bi";
 import { FaKey } from 'react-icons/fa';
 import { MdViewComfy } from "react-icons/md";
+import { MdOutlineCategory } from "react-icons/md";
+import { GrUserAdmin } from "react-icons/gr";
+
 
 
 import Link from "next/link";
@@ -19,7 +21,7 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <h3> Prueba de  <GiHamburgerMenu/> e icono de cerrar <IoMdClose /> </h3>
         <nav>
-          <div className="container mx-auto flex justify-between items-center">
+          <div className="flex space-x-5 container mx-auto flex justify-between items-center">
             <button>
               <Link href="/navbar">
                 <TbLayoutNavbarFilled size={32} />
@@ -67,6 +69,14 @@ export default function Home() {
                 <MdViewComfy size={32} />
               </Link>
             </button>
+
+            <button>
+              <Link href="/categoriasAdmin">
+                <GrUserAdmin size={32} />
+                <MdOutlineCategory size={32} />
+              </Link>
+            </button>
+
           </div>
         </nav>
       </main>
